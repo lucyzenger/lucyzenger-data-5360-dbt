@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_agent
+    description: "Insurance agent dimension"
+  - name: dim_customer
+    description: "Insurance customer dimension"
+  - name: dim_date
+    description: "Insurance date dimension"
+  - name: dim_policy
+    description: "Insurance policy dimension"
+  - name: fact_claim
+    description: "Insurance claim fact"
+    columns: 
+      - name: policy_key
+        description: "A foreign key to the policy dimension"
