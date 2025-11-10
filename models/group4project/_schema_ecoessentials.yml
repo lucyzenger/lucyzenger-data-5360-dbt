@@ -1,0 +1,37 @@
+version: 2
+ 
+models:
+
+  - name: stg_email_marketing_events
+
+    description: "Staging table for raw email marketing event data from Salesforce Marketing Cloud."
+ 
+  - name: dim_customer
+
+    description: "Combines transactional customers and email subscribers."
+ 
+  - name: dim_email
+
+    description: "Describes each unique marketing email (emailid + sendtimestamp)."
+ 
+  - name: dim_promotional_campaign
+
+    description: "Conformed campaign dimension combining sales and email campaigns."
+ 
+  - name: dim_product
+
+    description: "Product dimension."
+ 
+  - name: dim_date
+
+    description: "Date dimension with one row per calendar day."
+ 
+  - name: fact_sales
+
+    description: "One row per order line item (sales fact)."
+ 
+  - name: fact_marketing
+
+    description: "One row per customer + email + campaign + date + event type (marketing fact)."
+
+ 

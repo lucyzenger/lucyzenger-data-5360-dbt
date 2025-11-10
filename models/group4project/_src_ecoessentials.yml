@@ -1,0 +1,18 @@
+version: 2
+ 
+sources:
+  - name: ecoessentials_sales_transactional_db
+    database: LUCYZENGER
+    schema: ECOESSENTIALS_SALES_TRANSACTIONAL_DB
+    tables:
+      - name: product
+      - name: promotional_campaign
+      - name: customer
+      - name: order
+      - name: order_line
+ 
+  - name: ecoessentials_marketing
+    database: LUCYZENGER
+    schema: ECOESSENTIALS_MARKETING
+    tables:
+      - name: MARKETING_EMAILS
