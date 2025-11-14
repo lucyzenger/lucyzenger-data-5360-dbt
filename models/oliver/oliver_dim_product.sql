@@ -9,4 +9,4 @@ select
     PRODUCT_NAME,
     DESCRIPTION,
     UNIT_PRICE
-from {{ source('oliver_fivetran', 'product') }}
+from {{ source('oliver_dw_source', 'product') }}

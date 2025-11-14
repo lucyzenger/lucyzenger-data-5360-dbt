@@ -10,4 +10,4 @@ select
     last_name,
     email,
     -- add other columns you want in your dimension
-from {{ source('oliver_fivetran', 'customer') }}
+from {{ source('oliver_dw_source', 'customer') }}

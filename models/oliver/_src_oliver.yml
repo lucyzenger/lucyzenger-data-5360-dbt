@@ -1,19 +1,59 @@
 version: 2
 
 sources:
-  - name: oliver_fivetran
-    database: LUCYZENGER
-    schema: oliver_dw_source
+  - name: oliver_dw_source
     tables:
       - name: customer
       - name: product
       - name: employee
-      - name: orderline
-      - name: orders
       - name: store
-
-  - name: employee_certifications
-    database: LUCYZENGER
-    schema: oliver_dw_source
-    tables:
+      - name: orderline
       - name: employee_certifications
+
+
+
+models:
+  - name: oliver_dim_customer
+    description: "Customer Dimension for Oliver DW"
+    columns:
+      - name: customer_key
+        tests:
+          - unique
+
+  - name: oliver_dim_date
+    description: "Date Dimension for Oliver DW"
+    columns:
+      - name: date_key
+        tests:
+          - unique
+
+  - name: fact_sales
+    description: "Sales Fact Table"
+    columns:
+    - name: sales_key
+      tests:
+        - unique
+    - name: order_id
+      tests:
+        - not_null
+    - name: product_id
+      tests:
+        - not_null
+    - name: quantity
+    - name: unit_price
+    - name: sales_amount
+
+
+  - name: stg_employee_certifications
+    description: "Staging table for Employee Certifications"
+    columns:
+      - name: certification_name
+        tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - "Level 1"
+                  - "Level 2"
+                  - "Level 3"
+                  - "Specialty"
+                  - "Trainer"

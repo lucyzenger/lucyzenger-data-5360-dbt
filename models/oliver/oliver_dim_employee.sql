@@ -9,4 +9,4 @@ select
     FIRST_NAME,
     LAST_NAME,
     EMAIL
-from {{ source('oliver_fivetran', 'employee') }}
+from {{ source('oliver_dw_source', 'employee') }}
