@@ -10,4 +10,4 @@ select
     STREET,
     CITY,
     STATE
-from {{ source('oliver_fivetran', 'store') }}
+from {{ source('oliver_dw_source', 'store') }}

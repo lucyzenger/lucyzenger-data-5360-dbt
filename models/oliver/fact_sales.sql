@@ -11,4 +11,4 @@ select
     QUANTITY,
     UNIT_PRICE,
     QUANTITY * UNIT_PRICE as sales_amount
-from {{ source('oliver_fivetran', 'orderline') }}
+from {{ source('oliver_dw_source', 'orderline') }}
