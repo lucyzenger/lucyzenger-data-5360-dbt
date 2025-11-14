@@ -42,24 +42,23 @@ models:
       - name: sales_amount
 
   - name: stg_employee_certifications
-    description: "Staging table for Employee Certifications"
     columns:
-      - name: certification_name
-        tests:
-          - accepted_values:
-              arguments:
-                values:
-                  - "Level 1"
-                  - "Level 2"
-                  - "Level 3"
-                  - "Specialty"
-                  - "Trainer"
-                  - "Cash Handling and Security"
-                  - "Product Knowledge Level 2"
-                  - "Point of Sale Operations"
-                  - "Leadership and Coaching"
-                  - "Strategic Retail Operations"
-                  - "Conflict Resolution"
-                  - "Inventory Management"
-                  - "Customer Service Excellence"
-                  - "Workplace Safety"
+    - name: certification_name
+      tests:
+        - accepted_values:
+            arguments:
+              values:
+                - "Level 1"
+                - "Level 2"
+                - "Level 3"
+                - "Specialty"
+                - "Trainer"
+                - "Cash Handling and Security"
+                - "Product Knowledge Level 2"
+                - "Point of Sale Operations"
+                - "Leadership and Coaching"
+                - "Strategic Retail Operations"
+                - "Conflict Resolution"
+                - "Inventory Management"
+                - "Customer Service Excellence"
+                - "Workplace Safety"
