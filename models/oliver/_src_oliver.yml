@@ -10,8 +10,6 @@ sources:
       - name: orderline
       - name: employee_certifications
 
-
-
 models:
   - name: oliver_dim_customer
     description: "Customer Dimension for Oliver DW"
@@ -30,19 +28,18 @@ models:
   - name: fact_sales
     description: "Sales Fact Table"
     columns:
-    - name: sales_key
-      tests:
-        - unique
-    - name: order_id
-      tests:
-        - not_null
-    - name: product_id
-      tests:
-        - not_null
-    - name: quantity
-    - name: unit_price
-    - name: sales_amount
-
+      - name: sales_key
+        tests:
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+      - name: quantity
+      - name: unit_price
+      - name: sales_amount
 
   - name: stg_employee_certifications
     description: "Staging table for Employee Certifications"
@@ -57,3 +54,12 @@ models:
                   - "Level 3"
                   - "Specialty"
                   - "Trainer"
+                  - "Cash Handling and Security"
+                  - "Product Knowledge Level 2"
+                  - "Point of Sale Operations"
+                  - "Leadership and Coaching"
+                  - "Strategic Retail Operations"
+                  - "Conflict Resolution"
+                  - "Inventory Management"
+                  - "Customer Service Excellence"
+                  - "Workplace Safety"
